@@ -1,0 +1,22 @@
+package net.mathmods.forbiddenmagic.render;
+
+import org.lwjgl.opengl.GL11;
+
+import net.mathmods.forbiddenmagic.Forbidden;
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
+
+public class TileEntityRenderBookTable extends TileEntitySpecialRenderer {
+
+	public ResourceLocation Bottom = new ResourceLocation(Forbidden.modID + ":tile/tileBookStand/bottom.png");
+	public ResourceLocation Side = new ResourceLocation(Forbidden.modID + ":tile/tileBookStand/side.png");
+	public ResourceLocation Top = new ResourceLocation(Forbidden.modID + ":tile/tileBookStand/top.png");
+	
+	@Override
+	public void renderTileEntityAt(TileEntity tile, double x, double y,
+			double z, float f) {
+		GL11.glTranslated(x, y, z);
+	}
+
+}

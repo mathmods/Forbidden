@@ -1,0 +1,5 @@
+package net.mathmods.forbiddenmagic.block;
+
+public class BlockBookTable {
+
+}

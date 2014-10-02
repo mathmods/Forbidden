@@ -1,0 +1,5 @@
+package net.mathmods.forbiddenmagic.client;
+
+public class ClientProxy {
+
+}

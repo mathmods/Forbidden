@@ -1,0 +1,5 @@
+package net.mathmods.forbiddenmagic.tileentity;
+
+public class TileEntityBookTable {
+
+}

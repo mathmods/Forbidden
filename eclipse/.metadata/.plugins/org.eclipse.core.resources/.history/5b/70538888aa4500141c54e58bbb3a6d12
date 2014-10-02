@@ -1,0 +1,5 @@
+package net.mathmods.forbiddenmagic.worldgen;
+
+public class WorldGenForbidden {
+
+}

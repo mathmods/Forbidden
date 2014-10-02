@@ -1,0 +1,100 @@
+package net.mathmods.forbiddenmagic.worldgen;
+
+import java.util.Random;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.world.World;
+
+public class WorldGenForbiddenDungeon {
+
+	public boolean generate(World w, Random r, int x, int y, int z){
+		w.setBlock(x, y, z, Blocks.chest);
+		System.out.println("Spawning dungeon at: " + x + " " + y + " " + z);
+		w.setBlock(x, y+1, z, Blocks.enchanting_table);
+		w.setBlock(x, y-1, z, Blocks.stonebrick, 2, 2);
+		w.setBlockToAir(x, y + 2, z);
+		w.setBlockToAir(x, y + 3, z);
+		for(int X = 1; X < 6; X++){
+			for(int Z = 1; Z < 6; Z++){
+				for(int Y = 0; Y < 6; Y++){
+					int type = r.nextInt(3);
+					if(Y == 0 || Y == 5 || Z == 5 || X == 5){
+						if (type == 0){
+							w.setBlock(x + X, Y + y - 1, z + Z, Blocks.cobblestone);
+						}else if(type == 1){
+							w.setBlock(x + X, Y + y - 1, z + Z, Blocks.mossy_cobblestone);
+						}else if(type == 2){
+							w.setBlock(x + X, Y + y - 1, z + Z, Blocks.stonebrick, 2, 2);
+						}
+					}else{
+						if(w.getBlock(x + X, Y + y - 1, z + Z) != Blocks.chest && w.getBlock(x + X, Y + y - 1, z + Z) != Blocks.enchanting_table){
+							w.setBlockToAir(x + X, Y + y - 1, z + Z);
+						}
+					}
+				}
+			}
+		}
+		for(int X = 1; X < 6; X++){
+			for(int Z = 1; Z < 6; Z++){
+				for(int Y = 0; Y < 6; Y++){
+					int type = r.nextInt(3);
+					if(Y == 0 || Y == 5 || Z == 5 || X == 5){
+						if (type == 0){
+							w.setBlock(x - X, Y + y - 1, z - Z, Blocks.cobblestone);
+						}else if(type == 1){
+							w.setBlock(x - X, Y + y - 1, z - Z, Blocks.mossy_cobblestone);
+						}else if(type == 2){
+							w.setBlock(x - X, Y + y - 1, z - Z, Blocks.stonebrick, 2, 2);
+						}
+					}else{
+						if(w.getBlock(x - X, Y + y - 1, z - Z) != Blocks.chest && w.getBlock(x - X, Y + y - 1, z - Z) != Blocks.enchanting_table){
+							w.setBlockToAir(x - X, Y + y - 1, z - Z);
+						}
+					}
+				}
+			}
+		}
+		for(int X = 1; X < 6; X++){
+			for(int Z = 1; Z < 6; Z++){
+				for(int Y = 0; Y < 6; Y++){
+					int type = r.nextInt(3);
+					if(Y == 0 || Y == 5 || Z == 5 || X == 5){
+						if (type == 0){
+							w.setBlock(x + X, Y + y - 1, z - Z, Blocks.cobblestone);
+						}else if(type == 1){
+							w.setBlock(x + X, Y + y - 1, z - Z, Blocks.mossy_cobblestone);
+						}else if(type == 2){
+							w.setBlock(x + X, Y + y - 1, z - Z, Blocks.stonebrick, 2, 2);
+						}
+					}else{
+						if(w.getBlock(x + X, Y + y - 1, z - Z) != Blocks.chest && w.getBlock(x + X, Y + y - 1, z + Z) != Blocks.enchanting_table){
+							w.setBlockToAir(x + X, Y + y - 1, z - Z);
+						}
+					}
+				}
+			}
+		}
+		for(int X = 1; X < 6; X++){
+			for(int Z = 1; Z < 6; Z++){
+				for(int Y = 0; Y < 6; Y++){
+					int type = r.nextInt(3);
+					if(Y == 0 || Y == 5 || Z == 5 || X == 5){
+						if (type == 0){
+							w.setBlock(x - X, Y + y - 1, z + Z, Blocks.cobblestone);
+						}else if(type == 1){
+							w.setBlock(x - X, Y + y - 1, z + Z, Blocks.mossy_cobblestone);
+						}else if(type == 2){
+							w.setBlock(x - X, Y + y - 1, z + Z, Blocks.stonebrick, 2, 2);
+						}
+					}else{
+						if(w.getBlock(x - X, Y + y - 1, z + Z) != Blocks.chest && w.getBlock(x + X, Y + y - 1, z + Z) != Blocks.enchanting_table){
+							w.setBlockToAir(x - X, Y + y - 1, z + Z);
+						}
+					}
+				}
+			}
+		}
+		return true;
+	}
+	
+}

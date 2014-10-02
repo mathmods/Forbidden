@@ -1,0 +1,35 @@
+package net.mathmods.forbiddenmagic;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+
+@Mod(version = "0.0.1", modid = "ForbiddenMagic", name = "Forbidded Magic")
+public class Forbidden{
+
+	@Instance(value = "ForbiddenMagic")
+	public static Forbidden instance;
+	
+	@SidedProxy(clientSide="net.mathmods.forbiddenmagic.client.ClientProxy", 
+			serverSide="net.mathmods.forbiddenmagic.CommonProxy")
+	public static CommonProxy proxy;
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+
+	}
+
+	@EventHandler
+	public void init(FMLInitializationEvent event) {
+		proxy.registerRenderers();
+	}
+
+	@EventHandler
+	public static void postInit(FMLPostInitializationEvent event) {
+
+	}
+}

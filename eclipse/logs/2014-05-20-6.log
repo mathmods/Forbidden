@@ -1,0 +1,16 @@
+[16:57:11] [main/INFO]: Setting user: Player125
+[16:57:12] [Client thread/INFO]: LWJGL Version: 2.9.0
+[16:57:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Forest magic
+[16:57:18] [Sound Library Loader/INFO]: Sound engine started
+[16:57:18] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[16:57:19] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[16:57:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Forest magic
+[16:57:19] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[16:57:19] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[16:57:20] [Sound Library Loader/INFO]: Sound engine started
+[16:57:21] [MCO Availability Checker #1/ERROR]: Couldn't connect to Realms
+[16:57:23] [Server thread/INFO]: Starting integrated minecraft server version 1.7.2
+[16:57:23] [Server thread/INFO]: Generating keypair
+[16:57:24] [Server thread/INFO]: Preparing start region for level 0
+[16:57:25] [Server thread/INFO]: Player125[local:E:a888449a] logged in with entity id 0 at (-1410.6621269124587, 56.0, -1566.2009004904519)
+[16:57:25] [Server thread/INFO]: Player125 joined the game

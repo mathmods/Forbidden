@@ -1,0 +1,15 @@
+package com.mathmods.forestmagic.item;
+
+import com.mathmods.forestmagic.Main;
+
+import net.minecraft.item.Item;
+
+public class ItemKnife extends Item {
+
+	public ItemKnife() {
+		setUnlocalizedName("Knife");
+		setMaxStackSize(1);
+		setCreativeTab(Main.tabFM);
+	}
+
+}

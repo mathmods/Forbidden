@@ -1,0 +1,24 @@
+package com.mathmods.forestmagic.item;
+
+import com.mathmods.forestmagic.Main;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.Item;
+
+public class ItemKnife extends Item {
+
+	public ItemKnife() {
+		setUnlocalizedName("Knife");
+		setMaxStackSize(1);
+		setCreativeTab(Main.tabFM);
+	}
+	
+	
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IIconRegister reg){
+		this.itemIcon = reg.registerIcon(Main.Modid + ":" + getUnlocalizedName().substring(5));
+	}
+
+}

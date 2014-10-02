@@ -1,0 +1,58 @@
+package net.mathmods.forbiddenmagic.render;
+
+import org.lwjgl.opengl.GL11;
+
+import net.mathmods.forbiddenmagic.Forbidden;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
+
+public class TileEntityRenderBookTable extends TileEntitySpecialRenderer {
+
+	public ResourceLocation Texture = new ResourceLocation("forbiddenmagic", "tile/tileBookStand/tileBookStand.png");
+	
+	float pixel = 1F/16F;
+	float texturepixel = 1F/64F;
+	
+	@Override
+	public void renderTileEntityAt(TileEntity tile, double x, double y,
+			double z, float f) {
+		GL11.glTranslated(x, y, z);
+		this.bindTexture(Texture);
+		drawSide(tile);
+		drawTop(tile);
+		drawBottom(tile);
+	}
+	
+	public void drawSide(TileEntity tile){
+		Tessellator tessellator = Tessellator.instance;
+		tessellator.startDrawingQuads();
+		{
+			tessellator.addVertexWithUV(0, 1, 0, texturepixel*17, texturepixel*32);
+			tessellator.addVertexWithUV(0, 1, 0, texturepixel*17, texturepixel*0);
+			tessellator.addVertexWithUV(0, 1, 0, texturepixel*0, texturepixel*0);
+			tessellator.addVertexWithUV(0, 1, 0, texturepixel*0, texturepixel*32);
+		}
+		tessellator.draw();
+	}
+	
+	public void drawTop(TileEntity tile){
+		Tessellator tessellator = Tessellator.instance;
+		tessellator.startDrawingQuads();
+		{
+			
+		}
+		tessellator.draw();
+	}
+	
+	public void drawBottom(TileEntity tile){
+		Tessellator tessellator = Tessellator.instance;
+		tessellator.startDrawingQuads();
+		{
+			
+		}
+		tessellator.draw();
+	}
+
+}

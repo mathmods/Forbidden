@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ForbiddenMagic",
+  "name": "Forbidden Magic",
+  "description": "It's Forbidden.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["mathmods"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

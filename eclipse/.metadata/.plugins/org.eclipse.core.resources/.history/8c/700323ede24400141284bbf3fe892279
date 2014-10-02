@@ -1,0 +1,30 @@
+package net.mathmods.forbiddenmagic;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+
+//@Mod(version = "0.0.1", modid = "ForbiddenMagic")
+public class Forbidden{
+
+	@Instance(value = "ForbiddenMagic")
+	public static Forbidden instance;
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+
+	}
+
+	@EventHandler
+	public void init(FMLInitializationEvent event) {
+
+	}
+
+	@EventHandler
+	public static void postInit(FMLPostInitializationEvent event) {
+
+	}
+}
